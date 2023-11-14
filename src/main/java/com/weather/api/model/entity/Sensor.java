@@ -18,6 +18,7 @@ public class Sensor {
     @Id
     private String location;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "location")
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "location")
     private List<WeatherData> data;
 }

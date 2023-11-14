@@ -83,7 +83,7 @@ public class WeatherService {
 
     private void getLatestWeather(GetWeatherForSensorsDTO payload, HashMap<String, List<WeatherData>> mapOfData) {
         for (String sensorId : payload.sensorIds()) {
-            var latestTimeForData = weatherRepository.getLatestDataDateForSensor(sensorId);
+            var latestTimeForData = weatherRepository.getLatestDataDateForSensor(sensorId).orElse(LocalDateTime.now());
             mapOfData.put(sensorId,
                     weatherRepository.getLatestWeatherBySensor(sensorId, latestTimeForData));
         }
@@ -102,7 +102,7 @@ public class WeatherService {
                 .orElse(0);
     }
 
-    private double getAverageWindSpeed(Map.Entry<String, List<WeatherData>> entry) {
+    public double getAverageWindSpeed(Map.Entry<String, List<WeatherData>> entry) {
         return entry.getValue().stream()
                 .mapToDouble(WeatherData::getWindSpeed)
                 .average()

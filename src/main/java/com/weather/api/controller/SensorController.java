@@ -19,6 +19,6 @@ public class SensorController {
 
     @PostMapping(path = "/addSensor")
     public AddSensorResponseDTO addSensor(@RequestBody AddSensorDTO payload) {
-        return new AddSensorResponseDTO(null);
+        return sensorService.addSensor(payload);
     }
 }
