@@ -130,7 +130,7 @@ public class WeatherService {
 
     public boolean validateDateRange(LocalDate startDate, LocalDate endDate) {
         long daysBetween = DAYS.between(startDate, endDate);
-        if (daysBetween > 30 || daysBetween <= 0) {
+        if (daysBetween > 30 || daysBetween < 0) {
             throw new BadInputException("Range is too large please provide a range between 1-30 days to query.");
         }
         return true;
