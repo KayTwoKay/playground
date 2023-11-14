@@ -1,6 +1,6 @@
-## playground
+# Playground
 
-# prerequisites
+# Prerequisites
  * Java 17
  * Gradle
 
@@ -18,6 +18,6 @@ For an example of querys I have attached a Postman collection for testing.
   * Wind Direction - Relative to 360 degrees
 
 # How to run
- -Clone repository
- -Open in IntelliJ
- -Press play/run in ApiApplication.class
+ *Clone repository
+ *Open in IntelliJ
+ *Press play/run in ApiApplication.class
