@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "70ec704d-0fd7-4d1a-b274-4c45ba2dac25",
+		"name": "WeatherAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5525899"
+	},
+	"item": [
+		{
+			"name": "Add weather for castlebar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"temperature\": 12,\r\n    \"humidity\": 20,\r\n    \"windSpeed\": 4.7,\r\n    \"windDirection\": 100,\r\n    \"precipitation\": 33,\r\n    \"sensorLocation\": \"castlebar\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/weather/addWeather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"weather",
+						"addWeather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add weather for newport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"temperature\": 12,\r\n    \"humidity\": 20,\r\n    \"windSpeed\": 4.7,\r\n    \"windDirection\": 100,\r\n    \"precipitation\": 33,\r\n    \"sensorLocation\": \"newport\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/weather/addWeather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"weather",
+						"addWeather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add sensor for castlebar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": \"castlebar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sensor/addSensor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sensor",
+						"addSensor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add sensor for newport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": \"castlebar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sensor/addSensor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sensor",
+						"addSensor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather for range",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"sensorIds\": [\r\n       \"castlebar\",\r\n       \"newport\"\r\n   ],\r\n   \"startDate\" : \"2023-11-11\",\r\n   \"endDate\" : \"2023-11-14\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/weather/getWeather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"weather",
+						"getWeather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get weather when no date supplied",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sensorIds\": [\r\n       \"castlebar\",\r\n       \"newport\"\r\n   ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/weather/getWeather",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"weather",
+						"getWeather"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
